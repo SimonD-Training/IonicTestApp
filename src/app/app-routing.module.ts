@@ -3,6 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router'
 import { CategoriesComponent } from './pages/categories/categories.component'
 import { ListComponent } from './pages/list/list.component'
 
+/**
+ * IF YOUR NAME IS NOT IN THE FOLLOWING YOU SHOULD NOT BE HERE
+ * SIMON MAXWELL
+ */
+
 const routes: Routes = [
 	// {
 	//   path: 'home',

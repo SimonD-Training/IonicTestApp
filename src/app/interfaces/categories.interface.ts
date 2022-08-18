@@ -1,3 +1,8 @@
+/**
+ * IF YOUR NAME IS NOT IN THE FOLLOWING YOU SHOULD NOT BE HERE
+ * SIMON MAXWELL
+ * ANTHONY BARRETT
+ */
 export class Category {
 	_id?: string
 	name: string
