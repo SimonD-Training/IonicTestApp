@@ -1,0 +1,27 @@
+#Design the appearance of the shopping list page using ionic components
+List---
+Xante Graham
+
+#Design the appearance of the categories page using ionic components
+Categories---
+Romario Donald
+
+Component Code---
+
+#Create the service responsible for cummunicating with the api and getting shopping list information (CRUD)
+List Service--
+Jordan Wint
+
+#Create the service responsible for cummunicating with the api and getting category information (CRUD)
+Category Service--
+Donte Patterson
+
+#Create the interfaces necessary for the shopping list and category services
+Interfaces--
+Anthony Barrett
+
+#Responsible for creating the code inside the component.ts files, in order to access services and produce relevant information as well as functionality for the frontend.
+Component Ts--
+Simon Maxwell
+Prince Willis
+Daejhonnel Denton (six)
