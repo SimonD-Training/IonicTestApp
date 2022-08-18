@@ -18,7 +18,7 @@ const routes: Routes = [
     component: ListComponent
   },
   {
-    path: 'list',
+    path: 'categories',
     component: CategoriesComponent
   },
 	{
