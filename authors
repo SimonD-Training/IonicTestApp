@@ -3,8 +3,13 @@ List---
 Xante Graham
 
 #Design the appearance of the categories page using ionic components
+#app/pages/categories/categories.component.html
+#Create a header stating the name "Shopping List" and create a table with which to display the Name of a category in a text input
+#and the Actions Column with buttons containing fontawesome icons(pencil, x) on the first row for editing or removing the category
+#the last row is for the creation of a new item and will have a text input for the new name, with a (plus) in the actions column
+#for the creation of the new category
 Categories---
-Romario Donald
+Kenni Leslie
 
 Component Code---
 
