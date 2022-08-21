@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+	<ion-menu contentId="main">
+		<!-- write your menu content here-->
+		<ion-nav>
+			<section class="block h-20">
+				<ion-header>
+					<ion-toolbar class="h-20 flex">
+						<ion-menu-toggle>
+							<ion-icon
+								name="chevron-back-outline"
+								size="large"
+								class="hover:text-blue-400 hover:cursor-pointer"></ion-icon>
+						</ion-menu-toggle>
+					</ion-toolbar>
+				</ion-header>
+			</section>
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item routerLink="/home"> Home </ion-item>
+				</ion-menu-toggle>
+				<ion-menu-toggle>
+					<ion-item routerLink="/categories"> Categories </ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+		</ion-nav>
+	</ion-menu>
+	<ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

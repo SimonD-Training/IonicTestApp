@@ -13,14 +13,14 @@ const routes: Routes = [
 	//   path: 'home',
 	//   loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
 	// },
-  {
-    path: 'home',
-    component: ListComponent
-  },
-  {
-    path: 'categories',
-    component: CategoriesComponent
-  },
+	{
+		path: 'home',
+		component: ListComponent,
+	},
+	{
+		path: 'categories',
+		component: CategoriesComponent,
+	},
 	{
 		path: '',
 		redirectTo: 'home',
@@ -29,7 +29,9 @@ const routes: Routes = [
 ]
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+	imports: [
+		RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+	],
 	exports: [RouterModule],
 })
 export class AppRoutingModule {}

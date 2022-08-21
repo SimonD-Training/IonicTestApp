@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 /**
  * IF YOUR NAME IS NOT IN THE FOLLOWING YOU SHOULD NOT BE HERE
  * SIMON MAXWELL
@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
  */
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss'],
+	selector: 'app-list',
+	templateUrl: './list.component.html',
+	styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
+	Items = [1, 2, 3, 4, 5]
+	constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {}
-
+	ngOnInit() {}
 }

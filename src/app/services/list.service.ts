@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 /**
  * IF YOUR NAME IS NOT IN THE FOLLOWING YOU SHOULD NOT BE HERE
  * SIMON MAXWELL
@@ -6,9 +6,8 @@ import { Injectable } from '@angular/core';
  */
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
 export class ListService {
-
-  constructor() { }
+	constructor() {}
 }
