@@ -9,28 +9,56 @@
 		<div class="container px-6 py-6 mx-auto">
 			<div class="grid grid-cols-1 gap-8 xl:mt-12 xl:gap-12 md:grid-cols-2">
 				<div
-					class="p-6 border rounded-xl border-r-gray-200 shadow-md transform duration-300">
+					class="p-2 border rounded-xl border-r-gray-200 shadow-md transform duration-300">
 					<div class="md:flex md:items-center md:-mx-4">
 						<div class="mt-4 md:mx-auto md:mt-0 h-fit">
 							<h1
 								class="text-2xl font-bold text-gray-2 capitalize text-center mb-5">
 								Items
 							</h1>
-							<div *ngFor="let item of Items" class="my-4">
+							<div
+								*ngFor="let item of Items; let i = index"
+								class="rounded-lg p-4 my-4 hover:bg-slate-800">
 								<div
 									class="flex flex-col justify-center align-middle items-center">
 									<div
-										class="flex justify-center md:space-x-10 space-x-5 items-center">
-										<div class="font-medium">Item Name</div>
-										<div class="font-medium">(Category)</div>
+										class="flex justify-between w-full md:space-x-10 space-x-5 items-center">
+										<input
+											class="w-full"
+											type="text"
+											[(ngModel)]="Items[i].name" />
 									</div>
 									<div
-										class="flex justify-center md:space-x-10 space-x-5 items-center">
-										<div class="font-medium">x4</div>
-										<div class="font-medium">$400</div>
+										class="flex justify-between w-full md:space-x-10 space-x-5 items-center">
+										<select class="font-medium w-full">
+											<option
+												class="w-5/12"
+												*ngFor="let cat of Categories"
+												[value]="cat.name"
+												[selected]="cat.name == item.category"
+												disabled>
+												{{ cat.name }}
+											</option>
+										</select>
 									</div>
 									<div
-										class="flex justify-center md:space-x-6 space-x-3 items-center">
+										class="flex justify-between w-full md:space-x-10 space-x-5 items-center">
+										<input
+											class="w-3/12"
+											type="number"
+											[(ngModel)]="Items[i].quantity" />
+										<span class="w-5/12">
+											$
+											<input
+												class="w-4/5"
+												type="number"
+												[(ngModel)]="Items[i].price" />
+										</span>
+									</div>
+									<br />
+									<div
+										class="flex justify-center md:space-x-6 space-x-3 items-center"
+										(click)="updateItem(item._id!, Items[i])">
 										<div
 											class="hover:text-yellow-400 hover:cursor-pointer">
 											<svg
@@ -50,7 +78,8 @@
 											</svg>
 										</div>
 										<div
-											class="hover:text-red-400 hover:cursor-pointer">
+											class="hover:text-red-400 hover:cursor-pointer"
+											(click)="deleteItem(item._id!)">
 											<svg
 												width="24"
 												height="24"
@@ -80,20 +109,49 @@
 									<div class="flex flex-col items-start">
 										<!-- <div class="font-medium">Item Name</div>
                     <div class="font-medium">Category</div> -->
-										<input type="text" placeholder="New Item" />
+										<input
+											class="flex-grow-1"
+											type="text"
+											style="border-style: none"
+											placeholder="New Item"
+											[(ngModel)]="newItem.name" />
 										<br />
-										<select>
-											<option [value]="null" selected disabled>
-												Select A Category
+										<select
+											class="flex-grow-1"
+											type="text"
+											style="border-style: none"
+											placeholder="+"
+											[(ngModel)]="newItem.category">
+											<option selected disabled [value]="undefined">
+												Select a Category
+											</option>
+											<option
+												*ngFor="let category of Categories"
+												[value]="category.name">
+												{{ category.name }}
 											</option>
 										</select>
 										<br />
-										<input type="number" placeholder="Price" /> <br />
-										<input type="number" placeholder="Amount" />
+										<td>
+											<input
+												class="flex-grow-1"
+												type="number"
+												style="border-style: none"
+												placeholder="Price"
+												[(ngModel)]="newItem.price" />
+										</td>
+										<br />
+										<input
+											class="flex-grow-1"
+											type="number"
+											style="border-style: none"
+											placeholder="Amount"
+											[(ngModel)]="newItem.quantity" />
 										<br />
 									</div>
 									<div
-										class="flex justify-center md:space-x-6 space-x-3 items-center">
+										class="flex justify-center md:space-x-6 space-x-3 items-center"
+										(click)="createItem(newItem)">
 										<div
 											class="hover:text-green-400 hover:cursor-pointer">
 											<svg

@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common'
 import { ListComponent } from './pages/list/list.component'
 import { CategoriesComponent } from './pages/categories/categories.component'
 import { customAnimation } from './controllers/animation.controller'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
 	declarations: [
@@ -25,7 +26,8 @@ import { customAnimation } from './controllers/animation.controller'
 		CommonModule,
 		IonicModule.forRoot({ navAnimation: customAnimation }),
 		AppRoutingModule,
-		HttpClientModule
+		HttpClientModule,
+		FormsModule
 	],
 	providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 	bootstrap: [AppComponent],
