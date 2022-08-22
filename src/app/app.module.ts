@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouteReuseStrategy } from '@angular/router'
+import { HttpClientModule } from '@angular/common/http'
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular'
 
@@ -24,6 +25,7 @@ import { customAnimation } from './controllers/animation.controller'
 		CommonModule,
 		IonicModule.forRoot({ navAnimation: customAnimation }),
 		AppRoutingModule,
+		HttpClientModule
 	],
 	providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
 	bootstrap: [AppComponent],
