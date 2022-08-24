@@ -3,7 +3,7 @@
  * SIMON MAXWELL
  * XANTE GRAHAM
 -->
-<ion-content>
+<ion-content class="bg-white">
 	<app-header></app-header>
 	<section class="block h-full">
 		<div class="container px-6 py-6 mx-auto">
@@ -12,13 +12,12 @@
 					class="p-2 border rounded-xl border-r-gray-200 shadow-md transform duration-300">
 					<div class="md:flex md:items-center md:-mx-4">
 						<div class="mt-4 md:mx-auto md:mt-0 h-fit">
-							<h1
-								class="text-2xl font-bold text-gray-2 capitalize text-center mb-5">
+							<h1 class="text-gray-800 text-2xl font-bold capitalize text-center mb-5">
 								Items
 							</h1>
 							<div
 								*ngFor="let item of Items; let i = index"
-								class="rounded-lg p-4 my-4 hover:bg-slate-800">
+								class="rounded-lg p-4 my-4 text-gray-900 hover:bg-slate-200">
 								<div
 									class="flex flex-col justify-center align-middle items-center">
 									<div
@@ -30,7 +29,7 @@
 									</div>
 									<div
 										class="flex justify-between w-full md:space-x-10 space-x-5 items-center">
-										<select class="font-medium w-full">
+										<select class="font-medium w-full bg-inherit">
 											<option
 												class="w-5/12"
 												*ngFor="let cat of Categories"
@@ -105,8 +104,8 @@
 							<hr />
 							<br />
 							<div>
-								<div class="flex flex-col justify-center items-center">
-									<div class="flex flex-col items-start">
+								<div class="flex flex-col justify-center items-center text-gray-800">
+									<div class="flex flex-col items-start ">
 										<!-- <div class="font-medium">Item Name</div>
                     <div class="font-medium">Category</div> -->
 										<input
@@ -117,7 +116,7 @@
 											[(ngModel)]="newItem.name" />
 										<br />
 										<select
-											class="flex-grow-1"
+											class="flex-grow-1 bg-inherit text-gray-500"
 											type="text"
 											style="border-style: none"
 											placeholder="+"

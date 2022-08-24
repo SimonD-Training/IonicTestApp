@@ -11,6 +11,7 @@
 		"lint": "ng lint",
 		"e2e": "ng e2e",
 		"lab": "ionic serve -o --lab",
+		"platform": "ionic cordova platform add android@11.0.0",
 		"apk": "ionic cordova build android"
 	},
 	"private": true,
